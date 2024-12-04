@@ -9,6 +9,7 @@
 import Foundation
 
 /// Représente l'état de l'éclairage d'une pièce.
+
 enum LightingState: String, CaseIterable, Identifiable {
     case on = "On"
     case off = "Off"

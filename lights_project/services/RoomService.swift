@@ -22,7 +22,9 @@ class RoomService: ObservableObject {
     /// Allume ou éteint toutes les lumières.
     func toggleAllLights(state: LightingState) {
         for index in rooms.indices {
+            // Mise à jour de l'état de l'éclairage
             rooms[index].lightingState = state
+            // Mise à jour du niveau d'éclairage
             rooms[index].lightingLevel = state == .on ? 1.0 : 0.0
         }
     }
@@ -30,6 +32,7 @@ class RoomService: ObservableObject {
     /// Met à jour une pièce spécifique.
     func updateRoom(_ room: Room) {
         if let index = rooms.firstIndex(where: { $0.id == room.id }) {
+            // Mise à jour de la pièce
             rooms[index] = room
         }
     }

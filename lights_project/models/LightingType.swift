@@ -9,6 +9,7 @@
 import Foundation
 
 /// Représente le type d'ampoule utilisée dans une pièce.
+// 
 enum LightingType: String, CaseIterable, Identifiable {
     case led = "LED"
     case halogen = "Halogen"
