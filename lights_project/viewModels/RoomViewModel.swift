@@ -31,18 +31,22 @@ class RoomViewModel: ObservableObject, Identifiable {
         room.name
     }
     
+    // Propriétés calculées pour faciliter l'accès depuis les vues.
     var lightingState: LightingState {
         room.lightingState
     }
     
+    // niveau d'éclairage de la pièce 
     var lightingLevel: Double {
         room.lightingLevel
     }
     
+    // Type d'ampoule utilisée dans la pièce
     var lightingType: LightingType {
         room.lightingType
     }
     
+    // Nombre de lumens de l'ampoule
     var lumens: Int {
         room.lumens
     }

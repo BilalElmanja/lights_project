@@ -11,7 +11,9 @@ import Combine
 
 /// ViewModel pour la liste des pièces.
 class RoomListViewModel: ObservableObject {
+    // Liste des pièces
     @Published var rooms: [RoomViewModel] = []
+    // État de l'éclairage pour le bouton "All Lights"
     @Published var toggleState: LightingState = .off
 
     private var roomService: RoomService
@@ -19,6 +21,7 @@ class RoomListViewModel: ObservableObject {
 
     init(roomService: RoomService) {
         self.roomService = roomService
+        // Initialisation des rooms
         self.rooms = roomService.rooms.map { RoomViewModel(room: $0, roomService: roomService) }
         
         // Observateur pour mettre à jour les rooms lorsqu'il y a des changements.
