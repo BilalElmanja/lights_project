@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Vue principale affichant la liste des pièces.
 struct RoomListView: View {
+    // ViewModel pour la liste des pièces
     @StateObject var viewModel = RoomListViewModel(roomService: RoomService())
 
     var body: some View {

@@ -78,3 +78,5 @@ struct RoomDetailView: View {
         UIPasteboard.general.string = info
     }
 }
+
+
